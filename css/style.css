@@ -1,0 +1,72 @@
+body {
+	background: linear-gradient(265deg, #95b5f5, #1a4fa7, #5c0958, #a80a0a, #fdb80c);
+	background-size: 1000% 1000%;
+	-webkit-animation: cedAnimation 24s ease infinite;
+	-moz-animation: cedAnimation 24s ease infinite;
+	-o-animation: cedAnimation 24s ease infinite;
+	animation: cedAnimation 24s ease infinite;
+	}
+
+	@-webkit-keyframes cedAnimation {
+	    0%{background-position:0% 52%}
+	    50%{background-position:100% 49%}
+	    100%{background-position:0% 52%}
+	}
+	@-moz-keyframes cedAnimation {
+	    0%{background-position:0% 52%}
+	    50%{background-position:100% 49%}
+	    100%{background-position:0% 52%}
+	}
+	@-o-keyframes cedAnimation {
+	    0%{background-position:0% 52%}
+	    50%{background-position:100% 49%}
+	    100%{background-position:0% 52%}
+	}
+	@keyframes cedAnimation {
+	    0%{background-position:0% 52%}
+	    50%{background-position:100% 49%}
+	    100%{background-position:0% 52%}
+	}
+
+.boite {
+    background-color: rgba(255, 255, 255, 0.3);
+    border: rgba(255, 255, 255, 0.4) solid 1px;
+    width: 600px;
+    margin: 0 auto;
+    padding-top: 10px;
+    margin-top: 30vh;
+    transition: 0.3s;
+    padding-bottom: 10px;
+}
+
+.boite:hover {
+    border: rgba(255, 255, 255, 1) solid 1px;
+}
+
+blockquote {
+    color: white;
+    margin-left: 20px;
+}
+
+.auth {
+    margin-right: 20px;
+    color: white;
+}
+
+button {
+    margin-left:60px;
+	color: white;
+}
+
+.ced {
+	color: white;
+}
+
+.copy {
+	width: 600px;
+    margin: 0 auto;
+}
+
+#by {
+	color: rgba(200, 200, 200, 1);
+}

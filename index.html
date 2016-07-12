@@ -1,23 +1,43 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html ng-app="quote">
+    <head>
+        <meta charset="utf-8">
+        <!--Import Google Icon Font-->
+        <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="css/animate.css" />
+        <link type="text/css" rel="stylesheet" href="css/style.css" />
+        <title>Machine à phrase automatique</title>
+        <!--Let browser know website is optimized for mobile-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
-</div>
+    <body ng-controller="QuoteCtrl">
+        <div class="row">
+            <div class="boite hoverable" >
+                <h4>
+                    <blockquote class="bounceInUp animated">"{{rep.quoteText}}"</blockquote>
+                </h4>
+                <p class="right-align auth pulse animated"><span id="by">BY </span>{{rep.quoteAuthor}}</p>
+                <div class="row">
+                    <div class="col l6">
+                        <a href="/index.html"><button class="btn">Nouvelle Phrase</button></a>
+                    </div>
+                    <div class="col l6">
+                        <a href="#" socialshare socialshare-provider="twitter" socialshare-text="{{rep.quoteText}}" socialshare-hashtags="QuoteOfTheDay" socialshare-url="http://magicolala.github.io"><button class="btn">Share me</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copy">
+                <p class="right-align ced">Designed & Developed by <a href="http://magicolala.github.io">Cédric Oloa</a></p>
+            </div>
+        </div>
+        <!--Import jQuery before materialize.js-->
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script type="text/javascript" src="js/angular.min.js"></script>
+        <script src="js/angular-socialshare.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+    </body>
+</html>
